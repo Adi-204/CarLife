@@ -32,6 +32,10 @@ li{
   padding-left: 26px;
   font-weight: 900;
 }
+ul a:hover {
+  color: #161616;
+  text-decoration: underline;
+}
 .homeimg{
   width: 100%;
 }
@@ -139,4 +143,125 @@ li{
   transform: scale(1.05);
 }
 
+/* Car Page CSS */
+
+
+/* Common styles for both big and small screens */
+.van-list-container {
+  padding-inline: 23px;
+}
+
+.van-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Responsive grid columns */
+  justify-items: center;
+  gap: 34px;
+  margin-top: 57px;
+}
+
+.van-tile {
+  border: 1px solid #ddd; /* Add a border for better separation */
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.van-tile a {
+  color: #161616;
+  text-decoration: none;
+}
+
+.van-tile img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.van-info {
+  margin-top: 15px;
+}
+
+.van-info h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.van-info p {
+  font-size: 16px;
+  color: #555;
+}
+
+.van-list-container button {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* Responsive styles for small screens */
+@media screen and (max-width: 767px) {
+  .van-list {
+      grid-template-columns: 1fr; /* Single column for small screens */
+      gap: 20px; /* Reduced gap for small screens */
+  }
+
+  .van-tile {
+      padding: 20px; /* Increase padding for better spacing on small screens */
+  }
+}
+
+/* Styles for van types */
+.van-type {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 20px;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  background-color: #FFEAD0;
+  color: #4D4D4D;
+  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.van-type:hover,
+.van-type:focus {
+  color: #FFEAD0;
+}
+
+.van-type.selected {
+  color: #FFEAD0;
+}
+
+.van-type.simple:hover,
+.van-type.simple.selected {
+  background-color: #E17654;
+}
+
+.van-type.rugged:hover,
+.van-type.rugged.selected {
+  background-color: #115E59;
+}
+
+.van-type.luxury:hover,
+.van-type.luxury.selected {
+  background-color: #161616;
+}
+
+/* Clear filters button */
+.van-type.clear-filters {
+  margin-left: 0;
+  margin-top: 10px;
+  padding: 8px 20px;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  text-decoration: underline;
+  background-color: transparent;
+  color: #4D4D4D;
+}
+
+/* Icons styles */
+i[class*='van-type-'] {
+  padding: 7px 14px;
+}
 
