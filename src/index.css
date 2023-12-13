@@ -196,17 +196,6 @@ ul a:hover {
   cursor: pointer;
 }
 
-/* Responsive styles for small screens */
-@media screen and (max-width: 767px) {
-  .van-list {
-      grid-template-columns: 1fr; /* Single column for small screens */
-      gap: 20px; /* Reduced gap for small screens */
-  }
-
-  .van-tile {
-      padding: 20px; /* Increase padding for better spacing on small screens */
-  }
-}
 
 /* Styles for van types */
 .van-type {
@@ -263,5 +252,69 @@ ul a:hover {
 /* Icons styles */
 i[class*='van-type-'] {
   padding: 7px 14px;
+}
+
+
+/* Van Details Page CSS */
+ 
+.van-detail-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.van-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.van-detail img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+.van-detail h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.van-detail > i {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.van-detail .van-price {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+  color: #FF8C38;
+}
+
+.van-detail .van-price span {
+  font-weight: 700;
+}
+
+.van-detail .link-button {
+  background-color: #FF8C38;
+  color: white;
+  font-size: 1.25rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 15px;
+}
+
+.van-detail .link-button:hover {
+  background-color: #FF6F00;
 }
 
