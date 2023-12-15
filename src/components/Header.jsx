@@ -8,33 +8,33 @@ export const Header = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const toggleLogo = () =>{
+  const toggleClose = () =>{
     setMobileMenuOpen(false);
   };
 
   return (
     <header>
       <Link to="/" className={`${isMobileMenuOpen ? 'mobile-logo' : 'logo'}`} 
-      onClick={toggleLogo}>
+      onClick={toggleClose}>
         #VANLIFE
       </Link>
       <button className="menu-toggle" onClick={toggleMobileMenu}>
-        &#9776; 
+        &#9776; Menu 
       </button>
       <nav>
         <ul className={isMobileMenuOpen ? 'mobile-nav nav-open mobile-nav-open' : ''}>
           <li>
-            <Link to="/host" className="nav-item" onClick={toggleLogo}>
+            <Link to="/host" className="nav-item" onClick={toggleClose}>
               Host
             </Link>
           </li>
           <li>
-            <Link to="/about" className="nav-item" onClick={toggleLogo}>
+            <Link to="/about" className="nav-item" onClick={toggleClose}>
               About
             </Link>
           </li>
           <li>
-            <Link to="/vans" className="nav-item" onClick={toggleLogo}>
+            <Link to="/vans" className="nav-item" onClick={toggleClose}>
               Vans
             </Link>
           </li>
