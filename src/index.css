@@ -6,30 +6,47 @@ html,body{
   background-color: #FFF7ED;
   font-family: "Inter", sans-serif;
 }
-nav{
-  height: 110px;
-  background-color: #FFF7ED;
+header {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
-  padding: 0 20px;
+  justify-content: space-between;
+  padding: 20px;
 }
-li{
+nav {
   display: flex;
   align-items: center;
-} 
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+nav ul li {
+  margin-right: 20px;
+}
 .nav-item {
   text-decoration: none;
-  padding-left: 30px;
   font-size: 16px;
-  padding-right: 30px;
   color: #4D4D4D;
+  padding-left: 30px;
 }
 .logo{
   text-decoration: none;
   color: #000000;
   font-size: 25px;
   padding-left: 26px;
+  font-weight: 900;
+}
+.mobile-nav {
+  display: none;
+}
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+.logo:hover {
+  color: #161616;
+  text-decoration: underline;
   font-weight: 900;
 }
 ul a:hover {
@@ -155,6 +172,7 @@ ul a:hover {
   justify-items: center;
   gap: 34px;
   margin-top: 57px;
+  margin-bottom: 8px;
 }
 
 .van-tile {
@@ -315,4 +333,39 @@ i[class*='van-type-'] {
 .van-detail .link-button:hover {
   background-color: #FF6F00;
 }
+
+/* Host Page css */ 
+
+
+.host-nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.host-nav a {
+  text-decoration: none;
+  color: #4D4D4D;
+  font-weight: 500;
+  padding: 5px 20px;
+}
+
+.host-nav a:hover {
+  color: #161616;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Footer CSS  */
+footer {
+  background-color: #161616;
+  color: #AAAAAA;
+  height: 74px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  font-weight: 500;
+}
+
 

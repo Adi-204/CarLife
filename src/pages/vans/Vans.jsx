@@ -25,6 +25,7 @@ export const Vans = () =>{
 
     return (
         <div className="van-list-container">
+            <h1>Explore our van options</h1>
             <div className="van-list">
                 {vans.length ? vanElements : <h2>Loading...</h2>}
             </div>

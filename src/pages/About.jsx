@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import about from './assets/about.png';
+import about from '../assets/about.png';
 import { Link } from "react-router-dom";
 
 export const About = ()=>{
