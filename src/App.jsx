@@ -6,10 +6,12 @@ import { About } from './pages/About';
 import { Vans } from './pages/vans/Vans';
 import { VanDetail } from './pages/vans/VanDetail';
 import { Layout } from './components/Layout';
+import { HostLayout } from './components/HostLayout';
 import { Dashboard } from './pages/host/Dashboard';
 import { Income } from './pages/host/Income';
 import { Review } from './pages/host/Review';
-import { HostLayout } from './components/HostLayout';
+import { HostVans } from './pages/host/HostVans';
+import { HostVanDetail } from './pages/host/HostVanDetail';
 
 export const App =()=>{
   return(
@@ -25,6 +27,8 @@ export const App =()=>{
             <Route index element = {<Dashboard />} />
             <Route path='income' element = {<Income />} />
             <Route path='reviews' element = {<Review />} />
+            <Route path='vans' element={<HostVans />} />
+            <Route path='vans/:id' element={<HostVanDetail />} />
           </Route>
 
         </Route>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -12,31 +12,52 @@ export const Header = () => {
     setMobileMenuOpen(false);
   };
 
+  const styles = {
+      fontWeight: "bold",
+      textDecoration: "underline",
+      color: "#161616"
+  }
+
   return (
     <header>
-      <Link to="/" className={`${isMobileMenuOpen ? 'mobile-logo' : 'logo'}`} 
+      <NavLink to="/" className={`${isMobileMenuOpen ? 'mobile-logo' : 'logo'}`} 
       onClick={toggleClose}>
         #VANLIFE
-      </Link>
+      </NavLink>
       <button className="menu-toggle" onClick={toggleMobileMenu}>
         &#9776; Menu 
       </button>
       <nav>
         <ul className={isMobileMenuOpen ? 'mobile-nav nav-open mobile-nav-open' : ''}>
           <li>
-            <Link to="/host" className="nav-item" onClick={toggleClose}>
+            <NavLink 
+            to="/host" 
+            className="nav-item" 
+            onClick={toggleClose}
+            style={({isActive})=> isActive ? styles : null}
+            >
               Host
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/about" className="nav-item" onClick={toggleClose}>
+            <NavLink 
+            to="/about" 
+            className="nav-item" 
+            onClick={toggleClose}
+            style={({isActive})=> isActive ? styles : null}
+            >
               About
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/vans" className="nav-item" onClick={toggleClose}>
+            <NavLink 
+            to="/vans" 
+            className="nav-item" 
+            onClick={toggleClose}
+            style={({isActive})=> isActive ? styles : null}
+            >
               Vans
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>

@@ -43,11 +43,6 @@ nav ul li {
 .menu-toggle {
   display: none;
 }
-.logo:hover {
-  color: #161616;
-  text-decoration: underline;
-  font-weight: 900;
-}
 ul a:hover {
   color: #161616;
   text-decoration: underline;
@@ -170,7 +165,7 @@ ul a:hover {
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Responsive grid columns */
   justify-items: center;
   gap: 34px;
-  margin-top: 57px;
+  margin-top: 30px;
   margin-bottom: 8px;
 }
 
@@ -367,6 +362,65 @@ footer {
   font-weight: 500;
 }
 
+/* Host Van Page */
+
+.host-nav {
+  display: flex;
+}
+
+.host-nav a {
+  text-decoration: none;
+  color: #4D4D4D;
+  font-weight: 500;
+  padding: 5px 20px;
+}
+
+.host-nav a:hover {
+  color: #161616;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.host-van-link-wrapper {
+  color: unset;
+  text-decoration: unset;
+}
+
+.host-vans-list {
+  padding-inline: 26px;
+}
+
+.host-vans-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.host-van-single {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 15px;
+  padding-block: 18px;
+  padding-left: 24px;
+}
+
+.host-van-single > img {
+  height: 140px;
+  border-radius: 5px;
+  margin-right: 17px;
+}
+
+.host-van-info h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-block: 10px;
+}
+
+.host-van-info p {
+  margin-block: 10px;
+}
+
 @media screen and (max-width: 760px) {
   .menu-toggle {
     display: block;
@@ -383,92 +437,107 @@ footer {
   .menu-toggle:hover {
     color: #161616;
   }
-header {
-  position: relative;
-}
-nav ul {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  background-color: #FFF7ED;
-}
-.nav-open {
-  display: flex;
-}
-.mobile-nav {
-  position: static;
-  list-style: none;
-  background-color: #FFF7ED;
-  padding: 10px;
-  position: absolute;
-  top: 70px;  
-  left: 0;
-  width: 100%;
-  z-index: 1;
-}
-.mobile-nav-open {
-  display: block;
-}
-.mobile-logo {
-  text-decoration: none;
-  color: #000000;
-  font-size: 25px;
-  padding-left: 26px;
-  font-weight: 900;
-}
-ul a:hover {
-  color: #161616;
-  text-decoration: underline;
-}
-header {
+  header {
+    position: relative;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #FFF7ED;
+  }
+  .nav-open {
+    display: flex;
+  }
+  .mobile-nav {
+    position: static;
+    list-style: none;
+    background-color: #FFF7ED;
+    padding: 10px;
+    position: absolute;
+    top: 70px;  
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .mobile-nav-open {
+    display: block;
+  }
+  .mobile-logo {
+    text-decoration: none;
+    color: #000000;
+    font-size: 25px;
+    padding-left: 26px;
+    font-weight: 900;
+  }
+  ul a:hover {
+    color: #161616;
+    text-decoration: underline;
+  }
+  header {
+      padding: 20px;
+  }    
+  .home-container {
+    padding: 60px 20px;
+  }
+
+  .home-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-container a {
+    width: 80%;
+  }
+
+  .about-page-container,
+  .about-hero-image,
+  .van-list,
+  .van-tile {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-page-content h1 {
+    font-size: 2rem;
+  }
+
+  .about-page-cta {
     padding: 20px;
-}    
-.home-container {
-  padding: 60px 20px;
-}
+  }
+  .van-list{
+    margin-top: 15px;
+  }
 
-.home-container h1 {
-  font-size: 2.5rem;
-}
+  .van-list-container {
+    padding: 10px;
+  }
 
-.home-container a {
-  width: 80%;
-}
+  .van-tile img {
+    border-radius: 0;
+    height: 275px;
+  }
+  .van-info p{
+    margin-bottom: 6px;
+  }
+  
+  .van-type,
+  .van-type.clear-filters {
+    margin: 0;
+  }
 
-.about-page-container,
-.about-hero-image,
-.van-list,
-.van-tile {
-  padding: 10px;
-}
-
-.about-page-content h1 {
-  font-size: 2rem;
-}
-
-.about-page-cta {
-  padding: 20px;
-}
-
-.van-list-container {
-  padding: 10px;
-}
-
-.van-tile img {
-  border-radius: 0;
-}
-
-.van-type,
-.van-type.clear-filters {
-  margin: 0;
-}
-
-.van-detail-container,
-.van-detail {
-  padding: 20px;
-}
+  .van-detail-container,
+  .van-detail {
+    padding: 20px;
+  }
+  .host-van-single > img {
+    height: 80px;
+    border-radius: 5px;
+    margin-right: 17px;
+  }
 }
 
