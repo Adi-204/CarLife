@@ -5,8 +5,6 @@
 html,body{
   background-color: #FFF7ED;
   font-family: "Inter", sans-serif;
-  display: flex;
-  flex-direction: column;
 }
 header {
   display: flex;
@@ -162,6 +160,16 @@ ul a:hover {
   padding-inline: 23px;
 }
 
+.van-list-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.van-list-filter-buttons > a {
+  margin-right: 15px;
+  text-decoration: none;
+}
+
 .van-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Responsive grid columns */
@@ -273,6 +281,7 @@ i[class*='van-type-'] {
   max-width: 800px;
   margin: auto;
   padding: 40px;
+  margin-bottom: 27px;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -468,8 +477,8 @@ footer {
   display: block;
   color: black;
   text-decoration: none;
-  margin-top: 60px;
-  margin-left: 26px;
+  margin-left: 6px;
+  padding-bottom: 20px;
 }
 
 .back-button span:hover {
@@ -533,6 +542,32 @@ footer {
 
 section.host-van-detail-info {
   margin-left: 14px;
+}
+
+/* Not Found CSS */
+
+.not-found-container {
+  padding-inline: 26px;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.not-found-container .link-button {
+  background-color: #161616;
+  display: block;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  border-radius: 9px;
+}
+
+.not-found-h1{
+  display: block;
+  margin-bottom: 16px;
 }
 
 /* Responsive CSS   */
