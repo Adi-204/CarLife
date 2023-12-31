@@ -506,15 +506,15 @@ footer {
 }
 
 .host-van-detail-info{
-  min-height: 30vh;
+  min-height: 60vh;
 }
 
 .host-van-detail-price{
-  min-height: 30vh;
+  min-height: 60vh;
 }
 
 .host-van-detail-photo{
-  min-height: 30vh;
+  min-height: 60vh;
 }
 
 .host-van-detail-info > h4 {
@@ -909,6 +909,12 @@ img.graph {
     margin-right: 20px;
     cursor: pointer;
     margin-top: 16px;
+  }
+  .host-reviews{
+    min-height: 100vh;
+  }
+  .host-vans{
+    min-height: 100vh;
   }
 }
 
