@@ -31,7 +31,7 @@ export const Header = () => {
         <ul className={isMobileMenuOpen ? 'mobile-nav nav-open mobile-nav-open' : ''}>
           <li>
             <NavLink 
-            to="/host" 
+            to="host" 
             className="nav-item" 
             onClick={toggleClose}
             style={({isActive})=> isActive ? styles : null}
@@ -41,7 +41,7 @@ export const Header = () => {
           </li>
           <li>
             <NavLink 
-            to="/about" 
+            to="about" 
             className="nav-item" 
             onClick={toggleClose}
             style={({isActive})=> isActive ? styles : null}
@@ -51,7 +51,7 @@ export const Header = () => {
           </li>
           <li>
             <NavLink 
-            to="/vans" 
+            to="vans" 
             className="nav-item" 
             onClick={toggleClose}
             style={({isActive})=> isActive ? styles : null}

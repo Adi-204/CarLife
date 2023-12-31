@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { ReactDOM } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
+import { getHostVans } from "../../api";
 
+export async function loader(){
+    return getHostVans();
+}
 
 export const HostVans = ()=>{
-    const [vansList,setVansList] = useState([]);
-
-    useEffect(()=>{
-        fetch("/api/host/vans")
-            .then(res => res.json())
-            .then(data => setVansList(data.vans))
-    },[])
+    
+    const vansList = useLoaderData();
 
     const vanListElement = vansList.map((van)=>{
         return <Link
@@ -33,14 +32,9 @@ export const HostVans = ()=>{
             <h1 className="host-vans-title">Your listed vans</h1>
             <div className="host-vans-list">
                 {
-                    vansList.length > 0 ? (
-                        <section>
-                            {vanListElement}
-                        </section>
-
-                    ) : (
-                            <h2>Loading...</h2>
-                        )
+                    <section>
+                        {vanListElement}
+                    </section>
                 }
             </div>
         </section>

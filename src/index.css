@@ -361,17 +361,7 @@ i[class*='van-type-'] {
 }
 
 /* Footer CSS  */
-/* footer {
-  background-color: #161616;
-  color: #AAAAAA;
-  height: 74px;
-  display: flex;
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  margin-top: auto;
-  font-weight: 500;
-} */
+
 footer {
   background-color: #161616;
   color: #AAAAAA;
@@ -380,6 +370,7 @@ footer {
   justify-content: center;
   align-items: center;
   font-weight: 500;
+  width: 100%;
 }
 
 /* Host Van Page */
@@ -477,8 +468,8 @@ footer {
   display: block;
   color: black;
   text-decoration: none;
-  margin-left: 6px;
-  padding-bottom: 20px;
+  margin-left: 16px;
+  margin-top: 12px;
 }
 
 .back-button span:hover {
@@ -514,6 +505,18 @@ footer {
   font-weight: 700;
 }
 
+.host-van-detail-info{
+  min-height: 30vh;
+}
+
+.host-van-detail-price{
+  min-height: 30vh;
+}
+
+.host-van-detail-photo{
+  min-height: 30vh;
+}
+
 .host-van-detail-info > h4 {
   font-weight: 700;
   font-size: 14px;
@@ -524,9 +527,10 @@ footer {
 }
 
 .host-van-price {
-  font-size: 24px;
+  font-size: 31px;
   font-weight: 500;
   margin-left: 14px;
+  margin-top: 20px;
 }
 
 .host-van-price > span {
@@ -535,7 +539,7 @@ footer {
 }
 
 .host-van-detail-image {
-  height: 110px;
+  height: 120px;
   border-radius: 5px;
   margin-left: 14px;
 }
@@ -568,6 +572,203 @@ section.host-van-detail-info {
 .not-found-h1{
   display: block;
   margin-bottom: 16px;
+}
+
+.red {
+  color: #cc0000;
+}
+
+/* Host DashBoard  */
+
+.host-dashboard-earnings {
+  background-color: #ffead0;
+  padding: 37px 26px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.host-dashboard-earnings > .info > h1 {
+  font-size: 36px;
+  color: #161616;
+  margin: 0;
+}
+
+.host-dashboard-earnings > .info > p {
+  color: #4d4d4d;
+}
+
+.host-dashboard-earnings > .info > p > span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.host-dashboard-earnings > .info > h2 {
+  margin: 0;
+  font-size: 38px;
+  color: #161616;
+  font-weight: 900;
+}
+
+.host-dashboard-reviews {
+  background-color: #ffddb2;
+  padding: 25px 26px;
+  display: flex;
+  align-items: center;
+}
+
+.host-dashboard-reviews > h2 {
+  margin: 0;
+}
+
+.host-dashboard-reviews .star {
+  color: #ff8c38;
+  margin-left: 15px;
+  font-size: 25px;
+}
+
+.host-dashboard-reviews p {
+  margin-left: 5px;
+  font-size: 20px;
+  color: #4d4d4d;
+  margin-right: auto;
+}
+
+.host-dashboard-reviews p > span {
+  font-weight: bold;
+  color: #161616;
+}
+
+.host-dashboard-vans {
+  padding: 38px 26px;
+}
+
+.host-dashboard-vans > .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top > h2{
+  margin-bottom: 12px;
+}
+
+.host-dashboard-vans .host-vans-list {
+  padding-inline: 0;
+}
+
+/* Income Page */
+
+.host-income {
+  padding-inline: 26px;
+  color: #161616;
+}
+
+.host-income > h1{
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.host-income > p {
+  color: #4d4d4d;
+}
+
+.host-income > p span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.host-income > h2 {
+  font-size: 38px;
+  color: #161616;
+  font-weight: 900;
+}
+
+img.graph {
+  width: 100%;
+  max-width: 500px;
+}
+
+.host-income .info-header > h3 {
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 60px;
+  margin-bottom: 12px;
+}
+
+.host-income .transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-bottom: 31px;
+  padding: 35px 29px;
+  border-radius: 6px;
+}
+.host-income .transaction > h3 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.host-income .transaction > p {
+  font-weight: 500;
+  font-size: 20px;
+  color: #4d4d4d;
+}
+
+/* Review Page  */
+
+.host-reviews {
+  padding-inline: 26px;
+  color: #161616;
+}
+
+.host-reviews .top-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.host-reviews .top-text > h2 {
+  font-weight: 700;
+  font-size: 32px;
+  margin: 0;
+  margin-right: 20px;
+  margin-top: 12px;
+}
+
+.host-reviews > img {
+  margin-bottom: 36px;
+}
+
+.host-reviews .review {
+  margin-block: 25px;
+}
+
+.host-reviews .review .info {
+  display: flex;
+}
+
+.host-reviews .review .name {
+  color: #161616;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.host-reviews .review .date {
+  color: #8c8c8c;
+}
+
+.host-reviews hr {
+  background-color: #c7c7c7;
+  height: 1px;
+  border: 0;
+}
+
+.host-reviews .review-star {
+  color: #ff8c38;
+  margin-right: 5px;
 }
 
 /* Responsive CSS   */
@@ -678,7 +879,7 @@ section.host-van-detail-info {
   
   .van-type,
   .van-type.clear-filters {
-    margin: 0;
+    margin-top: 4px
   }
 
   .van-detail-container,
@@ -699,6 +900,15 @@ section.host-van-detail-info {
   }
   .host-van-detail-info-text > h4 {
     font-size: 17px;
+  }
+  .host-vans-list {
+    padding-inline: 26px;
+    min-height: 70vh;
+  }
+  .van-list-container button {
+    margin-right: 20px;
+    cursor: pointer;
+    margin-top: 16px;
   }
 }
 

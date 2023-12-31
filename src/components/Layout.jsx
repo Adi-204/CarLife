@@ -6,11 +6,13 @@ import { Footer } from './Footer';
 
 export const Layout = ()=>{
     return (
-        <>
+        <div className="site-wrapper">
             <Header />
-            <Outlet />
+            <main>
+                <Outlet />
+            </main>
             <Footer />
-        </>
+        </div>
     )
 }
 

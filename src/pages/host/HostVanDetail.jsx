@@ -1,17 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { ReactDOM } from "react";
-import { useParams,Link, Outlet, NavLink } from "react-router-dom";
+import { useParams,Link, Outlet, NavLink, useLoaderData } from "react-router-dom";
+import { getHostVans } from "../../api";
 
+
+export async function loader( {params} ){
+    return getHostVans(params.id);
+}
 
 export const HostVanDetail = ()=>{
-    const [currentVan, setCurrentVan] = React.useState(null)
-    const params = useParams();
-
-    useEffect(()=>{
-        fetch(`/api/host/vans/${params.id}`)
-            .then(res => res.json())
-            .then(data => setCurrentVan(data.vans))
-    },[params.id])
+    const currentVan = useLoaderData();
 
     if (!currentVan) {
         return <h1>Loading...</h1>
@@ -65,7 +63,7 @@ export const HostVanDetail = ()=>{
                     Photos
                 </NavLink>
             </nav>
-            <Outlet context={[currentVan, setCurrentVan]} />
+            <Outlet context={[currentVan]} />
         </section>
     )
 }
